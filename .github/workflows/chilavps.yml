@@ -12,14 +12,14 @@ jobs:
     - name: Download Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/master/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/master/wallpaper.bat -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/master/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/main/loop.bat -OutFile loop.bat
     - name: Download Launcher.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/master/launcher/Node.js.lnk -OutFile Node.js.lnk
-        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/master/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
-        Invoke-WebRequest https://github.com/hdann/VPS_Free/raw/master/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
+        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/main/launcher/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://raw.githubusercontent.com/hdann/VPS_Free/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
+        Invoke-WebRequest https://github.com/hdann/VPS_Free/raw/main/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
     - name: Extract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ngrok.
@@ -42,4 +42,6 @@ jobs:
       run: cmd /c start.bat
     - name: Successful implementation! You can close the tab now.
       run: cmd /c loop.bat
+      
+      
       
